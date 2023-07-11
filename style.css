@@ -44,42 +44,36 @@ nav{
 }
 nav.sticky{
     padding: 0.8rem 4%;
-    background-color: var(--oldg);
+    background-color: var(--ygreen);
     transform: scaleY(1);
     box-shadow: 0 20px 40px 8px rgba(61, 61, 61, 0.12);
 }
-nav #logo-span{
-    color: var(--oldg);
-}
-nav.sticky #logo-span{
-    color: var(--bg-color);
+nav.sticky .logo{
+    background-position: center;
+    background-size: cover;
+    background-image: url(img/logosticky.png);
+    width: 6rem;
+    height: 2.5rem;
 }
 nav.sticky .link a{
-    font-size: 1rem;
     color: var(--bg-color);
 }
 nav.sticky .link a:hover{
     color: var(--ygreen);
 }
-nav.sticky .logo{
-    font-size: 1rem;
-    color: #fff;
-}
 nav.sticky .login{
     color: #fff;
-    font-size: 1rem;
-    padding: 0.4rem 1.2rem;
 }
 nav.sticky .signin{
     background-color: var(--bg-color);
     color: var(--oldg);
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
 }
 .logo{
-    font-style: italic;
-    font-size: 1.2rem;
-    color: var(--ygreen)
+    background-position: center;
+    background-size: cover;
+    background-image: url(img/logo.png);
+    width: 6.5rem;
+    height: 3.5rem;
 }
 .link{
     display: flex;
@@ -149,18 +143,7 @@ nav.sticky .signin{
     outline: 1px solid #6ca02d42;
     /* box-shadow: 0 1px 5px 2px rgba(61, 61, 61, 0.139); */
 }
-
-
-
 /* end dropdown and nav */
-
-
-
-
-
-
-
-
 
 
 
@@ -204,18 +187,75 @@ nav.sticky .signin{
 .hero-img{
     position: absolute;
     right: 0;
-    width: 50%;
+    width: 40%;
 }
 .hero-i{
     width: 100%;
     height: 100%
 }
 .elips{
+    width: 100%;
+    z-index: 10;
+}
+.elips32{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.sponsor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+/* infinite loop */
+.wrapper-brand {
+    z-index: 20;
     position: absolute;
     bottom: 0;
     width: 100%;
-    left: 0;
 }
+.slider {
+    display: flex;
+    align-items: center;
+    height: 110px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+}
+.slider .slide-track {
+    -webkit-animation: scroll 30s linear infinite;
+    animation: scroll 15s linear infinite;
+    display: flex;
+    width: calc(180px * 10);
+}
+.slider .slide {
+    margin: 0 8px;
+    height: 80px;
+    width: 180px;
+}
+.slider .slide img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #fff;
+}
+@-webkit-keyframes scroll {
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(calc(-180px * 3));
+}
+}
+/* end */
+
 
 
 /* star fitur */
@@ -223,8 +263,9 @@ nav.sticky .signin{
     /* height: 135vh; */
     padding: 1rem;
     position: relative;
-    background-color: var(--oldg);
+    background-color: var(--ygreen);
     width: 100%;
+    padding-bottom: 5rem;
 }
 .text-fitur{
     padding-top: 2rem;
@@ -250,6 +291,7 @@ nav.sticky .signin{
     height: 350px;
     background-color: #f3f3f3;
     box-shadow: 0 10px 20px 0 rgba(63, 78, 61, 0.347);
+    z-index: 10;
 }
 .c-header{
     width: 100%;
@@ -276,46 +318,25 @@ nav.sticky .signin{
     color: var(--bg-color);
     width: 50%;
 }
-/* infinite loop */
-.wrapper-brand {
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 1.5rem 0;
-}
-.slider {
-height: 110px;
-margin: auto;
-overflow: hidden;
-position: relative;
-width: 80%;
-}
-.slider .slide-track {
--webkit-animation: scroll 30s linear infinite;
-animation: scroll 30s linear infinite;
-display: flex;
-width: calc(250px * 10);
-}
-.slider .slide {
-    margin: 0 8px;
-height: 90px;
-width: 200px;
-}
-.slider .slide img {
+.retangle2{
+    position: absolute;
+    bottom: 0;
     width: 100%;
-height: 100%;
-border-radius: 20px;
-    background-color: #fff;
+    left: 0;
+    z-index: 10;
 }
-@-webkit-keyframes scroll {
-0% {
-    transform: translateX(0);
+.retangle-r{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
-100% {
-    transform: translateX(calc(-250px * 4));
+.retangle-l{
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
-}
-/* end */
+
+
 
 
 /* faq-sectioin */
@@ -331,10 +352,6 @@ border-radius: 20px;
 }
 .faq-text{
     text-decoration: underline;
-    position: absolute;
-    margin-top: 8rem;
-    top: 0;
-    text-align: center;
     font-size: 1.5rem;
     color: var(--ygreen);
 }
@@ -371,7 +388,7 @@ border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 1.3rem;
     color: #111130;
     font-weight: 500;
     border: none;
@@ -396,10 +413,14 @@ border-radius: 20px;
     transition: all 800ms;
 }
 .faq-img{
+    display: flex;
+    /* border: 1px solid black; */
     width: 50%;
 }
 .faq-img img{
-    width: 100%;
+    margin: auto;
+    /* border: 1px solid black; */
+    width:80%;
 }
 
 
