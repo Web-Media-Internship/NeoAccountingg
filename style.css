@@ -58,9 +58,6 @@ nav.sticky .logo{
 nav.sticky .link a{
     color: var(--bg-color);
 }
-nav.sticky .link a:hover{
-    color: var(--ygreen);
-}
 nav.sticky .login{
     color: #fff;
 }
@@ -124,7 +121,7 @@ nav.sticky .signin{
     color: #6DA02D;
     display: flex;
     flex-direction: column;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 0;
     /* border: 1px solid black; */
 }
 .dropdown:hover .dropmenu .wrap-a{
